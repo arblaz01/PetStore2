@@ -11,7 +11,26 @@
     if(ViewBag.ID == item.ID){
         <div class="row">
             <div class="col-md-3">
-                <img src="/Content/Images/hm.jpg" alt="Hyacinth Macaw" width="200px" height="200px" />
+                @if (item.Animal == "German Shepard")
+                {
+                    <img src="/Content/Images/gs.jpg" alt="German Shepherd" width="200px" height="200px" />
+                }
+                @if (item.Animal == "Black Cat")
+                {
+                    <img src="/Content/Images/bc.jpg" alt="Black Cat" width="200px" height="200px" />
+                }
+                @if (item.Animal == "Turtle")
+                {
+                    <img src="/Content/Images/t.jpg" alt="Turtle" width="200px" height="200px" />
+                }
+                @if (item.Animal == "Goldfish")
+                {
+                    <img src="/Content/Images/gf.jpg" alt="Goldfish" width="200px" height="200px" />
+                }
+                @if (item.Animal == "Hyacinth Macaw")
+                {
+                    <img src="/Content/Images/hm.jpg" alt="Hyacinth Macaw" width="200px" height="200px" />
+                }
                 <br />
                 <p style="font-size:20pt;margin-left:50px">$@Html.DisplayFor(modelItem =>item.Price)</p>
             </div>

@@ -10,7 +10,26 @@
 {
     <div class="row">
         <div class="col-md-1">
-            <img src="/Content/Images/hm.jpg" alt="Hyacinth Macaw" width="80px" height="80px" />
+            @if (item.Animal == "German Shepard")
+            {
+                <img src="/Content/Images/gs.jpg" alt="German Shepherd" width="80px" height="80px" />
+            } 
+            @if (item.Animal == "Black Cat")
+            {
+                <img src="/Content/Images/bc.jpg" alt="Black Cat" width="80px" height="80px" />
+            }
+            @if (item.Animal == "Turtle")
+            {
+                <img src="/Content/Images/t.jpg" alt="Turtle" width="80px" height="80px" />
+            }
+            @if (item.Animal == "Goldfish")
+            {
+                <img src="/Content/Images/gf.jpg" alt="Goldfish" width="80px" height="80px" />
+            }
+            @if (item.Animal == "Hyacinth Macaw")
+            {
+                <img src="/Content/Images/hm.jpg" alt="Hyacinth Macaw" width="80px" height="80px" />
+            }
         </div>
         <div class="col-md-11">
             <b>@Html.DisplayFor(modelItem => item.Animal)</b> <a href="Inventory/Details/@item.ID">View</a>
