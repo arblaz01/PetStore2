@@ -1,11 +1,21 @@
-﻿@*@
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}*@
+﻿@model IEnumerable<PetStore.Models.Pet>
 
 @{
-    ViewBag.Title = "Pet List";
+    ViewBag.Title = "Inventory";
 }
 
-<h2>Pets</h2>
+<h2>Inventory</h2>
 
-<p>Hello from our View Template!</p>
+@foreach (var item in Model) {
+<div class="row">
+    <div class="col-md-1">
+        <img src="/Content/Images/hm.jpg" alt="Hyacinth Macaw" width="80px" height="80px" />
+    </div>
+    <div class="col-md-11">
+        <b>@Html.DisplayFor(modelItem => item.Animal)</b>
+        <br />
+        @Html.DisplayFor(modelItem => item.Description)
+    </div>
+</div>
+
+}
