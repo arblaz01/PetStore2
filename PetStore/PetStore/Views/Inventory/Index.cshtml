@@ -6,16 +6,16 @@
 
 <h2>Inventory</h2>
 
-@foreach (var item in Model) {
-<div class="row">
-    <div class="col-md-1">
-        <img src="/Content/Images/hm.jpg" alt="Hyacinth Macaw" width="80px" height="80px" />
+@foreach (var item in Model) 
+{
+    <div class="row">
+        <div class="col-md-1">
+            <img src="/Content/Images/hm.jpg" alt="Hyacinth Macaw" width="80px" height="80px" />
+        </div>
+        <div class="col-md-11">
+            <b>@Html.DisplayFor(modelItem => item.Animal)</b> <a href="Inventory/Details">View</a>
+            <br />
+            @Html.DisplayFor(modelItem => item.Description)
+        </div>
     </div>
-    <div class="col-md-11">
-        <b>@Html.DisplayFor(modelItem => item.Animal)</b>
-        <br />
-        @Html.DisplayFor(modelItem => item.Description)
-    </div>
-</div>
-
 }

@@ -20,12 +20,11 @@ namespace PetStore.Controllers
             return View(db.Pets.ToList());
         }
 
-        public ActionResult Details(string name, int numTimes = 1)
+        public ActionResult Details(int ID = 1)
         {
-            ViewBag.Message = "Hello " + name;
-            ViewBag.NumTimes = numTimes;
+            ViewBag.ID = ID;
 
-            return View();
+            return View(db.Pets.ToList());
         }
 	}
 }
