@@ -13,7 +13,7 @@
             <img src="/Content/Images/hm.jpg" alt="Hyacinth Macaw" width="80px" height="80px" />
         </div>
         <div class="col-md-11">
-            <b>@Html.DisplayFor(modelItem => item.Animal)</b> <a href="Inventory/Details">View</a>
+            <b>@Html.DisplayFor(modelItem => item.Animal)</b> <a href="Inventory/Details/@item.ID">View</a>
             <br />
             @Html.DisplayFor(modelItem => item.Description)
         </div>
