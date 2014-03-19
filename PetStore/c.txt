@@ -1,0 +1,2 @@
+    <add name="DefaultConnection" connectionString="Data Source=(LocalDb)\v11.0;AttachDbFilename=|DataDirectory|\aspnet-PetStore-20140318021308.mdf;Initial Catalog=aspnet-PetStore-20140318021308;Integrated Security=True"
+      providerName="System.Data.SqlClient" />
